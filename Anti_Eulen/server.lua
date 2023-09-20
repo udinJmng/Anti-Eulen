@@ -24,7 +24,9 @@ AddEventHandler("BanEvent", function()
     else
         print(_source, "Eulen Detected ("..player_ping..")")
         if not fiveguardbans then
-            DropPlayer(_source, "Eulen Detected")
+            --+DropPlayer(_source, "Eulen Detected")
+    exports['txApi']:txApi_banPlayer(_source, "Hayoo Kamu Ngecheat ya...") -- my version banning system ( from txapi )
+
         else
             exports[fiveguardname]:fg_BanPlayer(_source, "Eulen detected", true)
         end
